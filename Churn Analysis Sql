@@ -1,6 +1,9 @@
+DATA CLEANING
+
 SELECT *
 FROM telecom_customer_churn;
 
+----ALTERING TABLE
 ALTER TABLE telecom_customer_churn RENAME COLUMN `Customer ID` TO Customer_ID;
 ALTER TABLE telecom_customer_churn RENAME COLUMN `Zip Code` TO zip_code;
 ALTER TABLE telecom_customer_churn RENAME COLUMN `Number of Dependents` TO no_of_dependents;
@@ -39,6 +42,8 @@ FROM telecom_customer_churn
 GROUP BY Customer_ID
 HAVING count(Customer_ID) > 1;
 
+
+----KEY INSIGHTS
 #--Count the number of customers--
 SELECT COUNT(Customer_ID) as total_customers
 FROM telecom_customer_churn;
@@ -67,8 +72,6 @@ GROUP BY Customer_Status;
 SELECT gender, ROUND(SUM(total_revenue),0) as revenue, ROUND(COUNT(Customer_ID) * 100.0 / SUM(COUNT(Customer_ID)) OVER(),1) AS Churn_Percentage
 FROM telecom_customer_churn
 GROUP BY gender;
-
-
 
 #--Revenue lost by Maven based on Gender of churned customers--
 SELECT gender, ROUND(SUM(total_revenue),0) as revenue, ROUND(COUNT(Customer_ID) * 100.0 / SUM(COUNT(Customer_ID)) OVER(),1) AS Churn_Percentage
