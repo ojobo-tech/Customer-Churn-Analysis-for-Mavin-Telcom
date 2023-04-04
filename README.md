@@ -1,4 +1,4 @@
-#Customer Churn Analysis Using SQL
+Customer Churn Analysis Using SQL
 Why are customers leaving Maven Telecom?
 
 The telecom industry is highly competitive, and customers have a wide selection of options to choose from. Companies rely heavily on customer retention to ensure continued growth and success. However, losing customers, also known as churn, is inevitable in any industry. As a data analyst on this project, my job is to provide an in-depth analysis of Maven Telecom's churn dataset and to answer the following questions:
@@ -7,10 +7,10 @@ The telecom industry is highly competitive, and customers have a wide selection 
 2. What is the ideal profile of a churned customer?
 3. What steps can Maven Telecom take to reduce churn and retain customers?
 
-#Project Strategy
+Project Strategy
 I downloaded the dataset from Maven Analytics and it contained information about customer demographics, subscription plans, and account records for Maven Telecom. I performed all data preparation and analysis using SQL (MySQL), and all the SQL codes will be provided below. The visualizations and dashboard were designed with MS PowerBI and Figma respectively.
 
-#Project Steps:
+Project Steps:
 1. Data Cleaning and Processing
 2. Exploratory Data Analysis
 3. Building the Ideal Churn Profile
@@ -18,12 +18,12 @@ I downloaded the dataset from Maven Analytics and it contained information about
 5. Customer Retention Strategies
 6. Data Visualisation
 
-#Data Cleaning and Processing
+Data Cleaning and Processing
 This dataset is bound to have null values because all customers have unique combinations of subscription preferences. Therefore, the presence of null values in my analysis is a deliberate and informed decision that allows me to provide a more complete understanding of Maven's customer base.
 I checked for duplicate values in the unique key (Customer_ID), and found none.
 
 
-#Analysis
+Analysis
 #1. Exploratory Analysis
 1a. Total Number of Customers
 The analysis showed that there are 7043 customers in total.
@@ -43,7 +43,7 @@ Almost half of the customers who churned had a relatively short tenure with the 
 71.1% of the churned customers use Bank Withdrawal as their method of payment for services to Maven Telecom. Could this be a reason for the churn rate? We will investigate further.
 
 
-#2. Demography of Churned Customers.
+2. Demography of Churned Customers.
 These are the key insights based on the demography of our churned customers.
 
 2a. What is the Gender of the Churned Customers?
@@ -59,7 +59,7 @@ Compared to the other age categories, 25.6% of the churned customers are between
 San Diego had the highest churn percentage at 9.9%, accounting for 185 churned customers from the cities where Maven has customers.
 
 
-#3. Service Used by Churned Customers
+3. Service Used by Churned Customers
 
 3a. What internet type did churners have?
 66% of all churned customers used Fiber Optic. While ~70% of customers who left for competitors also used Fiber Optic. Maven should review the quality and service of their Fiber Optic internet, as this could be the reason customers are leaving for competitors.
@@ -75,7 +75,7 @@ This shows that customers on a month-to-month contract are more likely to churn,
 77% of churned customers did not have premium tech support. It's possible that this service could have improved their after-sales experience and reduced churn.
 
 
-#4. General Reasons for Churn
+4. General Reasons for Churn
 
 4a. What Category produced the most churn?
 45% of churned customers stated 'Competitor' as their reason for leaving. It's interesting to note that a significant number of customers (17.2%) left due to dissatisfaction and (16.8%) left due to the attitude of the support staff. Maven also lost about $1.7 million to Competitors, making it the most expensive type of churn.
@@ -87,7 +87,7 @@ Of the total churn experienced, 16.7% of customers left because the 'competitor 
 Of the 45% of customers that left to a competitor, 37.2% of customers left because the 'competitor had better devices', 37% left because the 'competitor made better offer', 14% left because the 'competitor offered more data' and 12% left because the 'competitor offered better download speeds'.
 
 
-#5. The key churn indicators are therefore:
+5. The key churn indicators are therefore:
 
 Contract: 89% of churned customers were on the month-to-month contract
 Premium Tech Support: 77% of churners did not have premium tech support
@@ -95,28 +95,43 @@ Internet Type: 66% of churners used Fiber Optic internet
 Offer: 56% of churners did not have any promotional offers, while 23% had Offer E.
 Competitor: 45% of churners moved to competitors.
 
-#6. The ideal churn customer profile
+6. The ideal churn customer profile
 
 I built a simple churn profile with Figma with the key churn indicators I discussed in previous sections, and the churn demographic results below:
+
 25.6% of churned customers are between 40–55 years old
+
 ~50% of churned customers are Female
+
 64% of churned customers are Single
+
 94% of churned customers have no dependents in their household; it's possible they have more flexibility and fewer commitments, making it easier for them to switch providers or cancel their subscriptions.
 
 
-#7. Key Insights from the Analysis
+7. Key Insights from the Analysis
+
 Maven has 1869 churned customers, which accounted for $3.7m of total revenue lost.
+
 42% of churned customers only stayed for 6 months or less.
+
 The top 3 reasons for churn are competitors made better offers, competitors had better devices and attitude of support staff.
+
 Maven lost ~$1.7 million to competitors, making it the most expensive type of churn
+
 The key indicators of churn are Month-to-Month contract type, No Premium Tech Support, Fiber Optic internet, No promotional offer, and Offer E.
 70% of customers who churned to competitors used Fiber Optic, 56% received no promotional offer, 89% are on a month-to-month contract
 
-#8. Customer Retention Strategies
+8. Customer Retention Strategies
+
 Loyalty Programs: Since the top reason for churn is 'competitors making better offers', and more than half of churned customers did not have any promotional offers, Maven could implement different loyalty programs to retain their customers. For instance, they could reward customers on long-term contracts with discounted rates, free upgrade, or additional features.
+
 Improve Customer Support: Invest in training and development of support staff to ensure they provide excellent customer service. This could include regular coaching and feedback sessions, as well as incentives for staff who receive positive customer feedback.
+
 Make better devices: Evaluate the features, performance, and pricing of your devices to ensure they are in line with market standards and demand.
 Premium Tech Support: Since customers who did not have access to premium tech support were more likely to churn, Maven should consider offering this service to all customers.
+
 Improve Fiber Optic Service: Invest in improving your Fiber Optic offerings like faster speeds, more stable connections, and better customer support for Fiber Optic customers.
+
 Engage High-Value Customers: Prioritize engaging these customers to prevent them from leaving. Provide personalized offers, send targeted communications, and provide premium tech support to ensure these customers remain satisfied with their service.
+
 After-Sales Service: Schedule regular check-ins with customers to ensure they are still satisfied with their service. These check-ins could be in the form of surveys, phone calls, or email communications.
